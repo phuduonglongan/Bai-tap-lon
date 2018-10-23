@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace demo
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
         FormManager fm = new FormManager();
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }

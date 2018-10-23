@@ -22,7 +22,7 @@ namespace demo
         {
             this.Show();
             this.Visible = false;
-            Form1 f1 = new Form1();
+            FormLogin f1 = new FormLogin();
             DialogResult result = f1.ShowDialog();
            if (result == DialogResult.OK)
            {
@@ -32,5 +32,9 @@ namespace demo
 
         }
 
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
