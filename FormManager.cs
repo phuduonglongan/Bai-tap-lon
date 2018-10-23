@@ -21,7 +21,7 @@ namespace demo
         private void FormManager_Load(object sender, EventArgs e)
         {
             this.Show();
-            this.Enabled = false;
+            this.Visible = false;
             Form1 f1 = new Form1();
             DialogResult result = f1.ShowDialog();
            if (result == DialogResult.OK)

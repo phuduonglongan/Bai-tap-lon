@@ -43,10 +43,12 @@ namespace demo
                 }
                 else
                 {
+                    //may tao khong co csdl nha .nãy làm bên máy băng á.đường tạo sql bên máy đó
                     DialogResult result = MessageBox.Show("User hoặc Pass không đúng!!!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                     if (result == DialogResult.Cancel)
                     {
                         Application.Exit();
+                        
                     }
                     else
                     {
@@ -60,7 +62,7 @@ namespace demo
 
         private bool login(string Username, string Pass)
         {
-            string cnstr = "Server= . ; Database= NhânViên; Integrated Security=true";
+            string cnstr = @"Server= .; Database= NhânViên; Integrated Security=true";
             SqlConnection cn = new SqlConnection(cnstr);
             cn.Open();
 
@@ -84,9 +86,15 @@ namespace demo
            
             if (MessageBox.Show("Ban có thật sự muốn thoát không ?", "Thoát ", MessageBoxButtons.YesNo) == (DialogResult.Yes))
             {
-                this.Close();
+                Application.Exit();
             }
+           
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
