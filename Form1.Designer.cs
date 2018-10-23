@@ -1,6 +1,6 @@
 ﻿namespace demo
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             // btdangnhap
             // 
             this.btdangnhap.Location = new System.Drawing.Point(267, 163);
-            this.btdangnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btdangnhap.Margin = new System.Windows.Forms.Padding(2);
             this.btdangnhap.Name = "btdangnhap";
             this.btdangnhap.Size = new System.Drawing.Size(77, 24);
             this.btdangnhap.TabIndex = 3;
@@ -70,7 +70,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(176, 36);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(205, 20);
             this.txtUsername.TabIndex = 1;
@@ -78,15 +78,16 @@
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(176, 80);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(205, 20);
             this.txtPass.TabIndex = 2;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btThoat
             // 
             this.btThoat.Location = new System.Drawing.Point(362, 163);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(77, 24);
             this.btThoat.TabIndex = 4;
@@ -94,7 +95,7 @@
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click_1);
             // 
-            // Form1
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,8 +107,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btdangnhap);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.Form1_Load);
