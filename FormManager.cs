@@ -36,5 +36,18 @@ namespace demo
         {
             this.Close();
         }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TTCN t = new TTCN();
+            t.ShowDialog();
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Admin am = new Admin();
+            am.ShowDialog();
+
+        }
     }
 }
