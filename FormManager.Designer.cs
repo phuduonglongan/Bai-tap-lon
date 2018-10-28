@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +52,6 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhMụcToolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem,
             this.adminToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -63,20 +60,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1096, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // danhMụcToolStripMenuItem
-            // 
-            this.danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thoátToolStripMenuItem});
-            this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
-            this.danhMụcToolStripMenuItem.Text = "Danh mục";
-            // 
-            // thoátToolStripMenuItem
-            // 
-            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // tàiKhoảnToolStripMenuItem
             // 
@@ -111,7 +94,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 34);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(544, 482);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -130,7 +113,7 @@
             // listView1
             // 
             this.listView1.Location = new System.Drawing.Point(603, 65);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(319, 451);
             this.listView1.TabIndex = 4;
@@ -140,7 +123,7 @@
             // 
             this.btThemMon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemMon.Location = new System.Drawing.Point(931, 65);
-            this.btThemMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThemMon.Margin = new System.Windows.Forms.Padding(4);
             this.btThemMon.Name = "btThemMon";
             this.btThemMon.Size = new System.Drawing.Size(127, 50);
             this.btThemMon.TabIndex = 5;
@@ -151,7 +134,7 @@
             // 
             this.btGiamGia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGiamGia.Location = new System.Drawing.Point(931, 171);
-            this.btGiamGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btGiamGia.Margin = new System.Windows.Forms.Padding(4);
             this.btGiamGia.Name = "btGiamGia";
             this.btGiamGia.Size = new System.Drawing.Size(127, 50);
             this.btGiamGia.TabIndex = 6;
@@ -162,7 +145,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(931, 282);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 50);
             this.button2.TabIndex = 7;
@@ -172,7 +155,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(931, 123);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             100,
             0,
@@ -190,7 +173,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(931, 229);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             100,
             0,
@@ -219,7 +202,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(931, 383);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 22);
             this.textBox1.TabIndex = 11;
@@ -259,8 +242,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;

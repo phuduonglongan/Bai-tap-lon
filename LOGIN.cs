@@ -36,7 +36,7 @@ namespace demo
             else
             {
                 //if (Username == "Admin" && Pass == "111")
-                if (login(Username, Pass) == true)
+               if (login(Username, Pass) == true)
                 {
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -52,6 +52,7 @@ namespace demo
                     }
                     else
                     {
+                        txtPass.Text ="";
                         txtUsername.Focus();
                     }
                 }
@@ -60,13 +61,13 @@ namespace demo
 
         }
 
-        private bool login(string Username, string Pass)
+      private bool login(string Username, string Pass)
         {
-            string cnstr = @"Server= .; Database= NhânViên; Integrated Security=true";
+            string cnstr = "Server= .; Database= NhânViên; Integrated Security=true";
             SqlConnection cn = new SqlConnection(cnstr);
             cn.Open();
 
-            string sql = "SELECT COUNT(UserName) FROM NhânViên  WHERE Username = '" + Username + "'AND Password = '" + Pass + "'";
+            string sql = "SELECT COUNT(UserName) FROM Account  WHERE UserName = '" + Username + "'AND PassWord = '" + Pass + "'";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cn;
             cmd.CommandText = sql;
@@ -90,11 +91,6 @@ namespace demo
             }
            
             
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

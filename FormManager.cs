@@ -24,11 +24,15 @@ namespace demo
             this.Visible = false;
             FormLogin f1 = new FormLogin();
             DialogResult result = f1.ShowDialog();
-           if (result == DialogResult.OK)
-           {
-               this.Enabled = true;
-          }
-
+            if (result == DialogResult.OK)
+            {
+                this.Enabled = true;
+            }
+            else
+            {
+                Application.Exit();
+            }
+                
 
         }
 
