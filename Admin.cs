@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using demo.DAO;
 
 namespace demo
 {
@@ -20,20 +21,9 @@ namespace demo
         }
         void LoadAccountList()
         {
-            string cstr = @"Data Source=.;Initial Catalog= NhânViên ;Integrated Security=True";
-            SqlConnection cn = new SqlConnection(cstr);
-
-            string query = "SELECT * FROM dbo.Account";
-            cn.Open();
-
-            SqlCommand command = new SqlCommand(query, cn);
-            DataTable data = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-            adapter.Fill(data);
-            cn.Close();
-
-            dtgvAccount.DataSource = data;
+            string query = "dbo.USP_GetAccountByUserName @userName ";
+            DataProvider provider = new DataProvider();
+            dtgvAccount.DataSource = provider.ExcuteQuery(query, new object[] {"duong"} );
         }
       
     }
