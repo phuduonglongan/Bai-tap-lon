@@ -21,10 +21,6 @@ namespace demo
        
         private void btdangnhap_Click(object sender, EventArgs e)
         {
-            /* FormManager fm = new FormManager();
-             this.Hide();
-             fm.ShowDialog();
-             this.Show();*/
 
             string Username = txtUsername.Text;
             string Pass = txtPass.Text;
@@ -35,7 +31,6 @@ namespace demo
             }
             else
             {
-                //if (Username == "Admin" && Pass == "111")
                if (login(Username, Pass) == true)
                 {
                     this.DialogResult = DialogResult.OK;
@@ -84,13 +79,16 @@ namespace demo
         }
         private void btThoat_Click_1(object sender, EventArgs e)
         {
-           
+            FormLogin fLg = new FormLogin();
             if (MessageBox.Show("Ban có thật sự muốn thoát không ?", "Thoát ", MessageBoxButtons.YesNo) == (DialogResult.Yes))
             {
                 Application.Exit();
             }
-           
-            
+            else
+            {
+                fLg.ShowDialog();
+            }
+
         }
     }
 }

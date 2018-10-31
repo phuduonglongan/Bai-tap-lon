@@ -72,6 +72,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(272, 22);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "duong";
             // 
             // txtPass
             // 
@@ -80,6 +81,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(272, 22);
             this.txtPass.TabIndex = 2;
+            this.txtPass.Text = "1";
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // btThoat
@@ -112,7 +114,6 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-          //  this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

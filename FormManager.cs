@@ -32,13 +32,25 @@ namespace demo
             {
                 Application.Exit();
             }
-                
+
+           
 
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+            FormManager fm = new FormManager();
+            FormLogin f1 = new FormLogin();
+            DialogResult result1 = MessageBox.Show("Bạn thật sự muốn đăng xuất ?", "Thông Báo", MessageBoxButtons.YesNo);
+            if (result1 == DialogResult.Yes)
+            {
+                this.Visible = false;
+                this.ShowDialog();
+                f1.ShowDialog();
+                
+            }
+       
         }
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,5 +65,12 @@ namespace demo
             am.ShowDialog();
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Text = label3.Text.Substring(1) + label3.Text.Substring(0, 1);
+
+        }
     }
-}
+    }
+
