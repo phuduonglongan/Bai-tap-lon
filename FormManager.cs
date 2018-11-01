@@ -1,4 +1,6 @@
-﻿using System;
+﻿using demo.DAO;
+using demo.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +14,45 @@ namespace demo
 {
     public partial class FormManager : Form
     {
-      
+        private object TableDAO;
+
         public FormManager()
         {
             InitializeComponent();
+            LoadTable();
         }
 
+        #region Method
+        void LoadTable()
+        {
+            List<Table> tableList = DAO.TableDAO.Instance.LoadTableList();
+
+            foreach (Table item in tableList)
+            {
+                Button bt = new Button()
+                {
+                    Width = DAO.TableDAO.TableWidth,
+                    Height = DAO.TableDAO.TableHeight
+                };
+                bt.Text = item.Name + Environment.NewLine + item.Status;
+
+                switch (item.Status)
+                {
+                    case "Trống":
+                        bt.BackColor = Color.Aqua;
+                        break;
+                    case "Có Người":
+                        bt.BackColor = Color.Red;
+                        break;
+
+                }
+
+                flTable.Controls.Add(bt);
+            }
+        }
+        #endregion
+
+        #region Events 
         private void FormManager_Load(object sender, EventArgs e)
         {
             this.Show();
@@ -33,13 +68,13 @@ namespace demo
                 Application.Exit();
             }
 
-           
+
 
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             FormManager fm = new FormManager();
             FormLogin f1 = new FormLogin();
             DialogResult result1 = MessageBox.Show("Bạn thật sự muốn đăng xuất ?", "Thông Báo", MessageBoxButtons.YesNo);
@@ -48,9 +83,9 @@ namespace demo
                 this.Visible = false;
                 this.ShowDialog();
                 f1.ShowDialog();
-                
+
             }
-       
+
         }
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,6 +106,8 @@ namespace demo
             label3.Text = label3.Text.Substring(1) + label3.Text.Substring(0, 1);
 
         }
+        #endregion
+
     }
-    }
+}
 
