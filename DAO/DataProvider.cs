@@ -10,10 +10,22 @@ namespace demo.DAO
 {
     public class DataProvider
     {
+        private static DataProvider instance;
+
+        public static DataProvider Instance
+        {
+            get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
+
+            private set { DataProvider.instance = value; }
+        }
+
+        private DataProvider() { }
         private string cstr = @"Data Source=.;Initial Catalog= NhânViên ;Integrated Security=True";
 
+       
         public DataTable ExcuteQuery( string query, object[] parameter = null)
         {
+
             DataTable data = new DataTable();
             using (SqlConnection cn = new SqlConnection(cstr))
             {

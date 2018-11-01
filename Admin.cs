@@ -19,11 +19,15 @@ namespace demo
             InitializeComponent();
             LoadAccountList();
         }
+        void LoadFoodList()
+        {
+            string query = "selec * from food ";
+            dtgvFood.DataSource = DataProvider.Instance.ExcuteQuery(query);
+        }
         void LoadAccountList()
         {
             string query = "dbo.USP_GetAccountByUserName @userName ";
-            DataProvider provider = new DataProvider();
-            dtgvAccount.DataSource = provider.ExcuteQuery(query, new object[] {"duong"} );
+            dtgvAccount.DataSource = DataProvider.Instance.ExcuteQuery(query, new object[] {"duong"} );
         }
       
     }

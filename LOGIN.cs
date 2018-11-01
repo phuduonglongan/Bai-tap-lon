@@ -62,7 +62,7 @@ namespace demo
             SqlConnection cn = new SqlConnection(cnstr);
             cn.Open();
 
-            string sql = "SELECT COUNT(UserName) FROM Account  WHERE UserName = '" + Username + "'AND PassWord = '" + Pass + "'";
+            string sql = "SELECT COUNT(Username) FROM Account WHERE UserName = '" + Username + "'AND PassWord = '" + Pass + "'";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cn;
             cmd.CommandText = sql;
