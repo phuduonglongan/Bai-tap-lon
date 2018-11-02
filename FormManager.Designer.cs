@@ -34,7 +34,7 @@
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flTable = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.btThemMon = new System.Windows.Forms.Button();
@@ -94,19 +94,20 @@
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
-            // flowLayoutPanel1
+            // flTable
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 108);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(544, 408);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.flTable.AutoScroll = true;
+            this.flTable.Location = new System.Drawing.Point(17, 108);
+            this.flTable.Margin = new System.Windows.Forms.Padding(4);
+            this.flTable.Name = "flTable";
+            this.flTable.Size = new System.Drawing.Size(569, 428);
+            this.flTable.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(597, 34);
+            this.label1.Location = new System.Drawing.Point(605, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 26);
@@ -115,18 +116,19 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(603, 65);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Location = new System.Drawing.Point(610, 65);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(319, 451);
+            this.listView1.Size = new System.Drawing.Size(312, 471);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // btThemMon
             // 
             this.btThemMon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemMon.Location = new System.Drawing.Point(931, 65);
-            this.btThemMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThemMon.Margin = new System.Windows.Forms.Padding(4);
             this.btThemMon.Name = "btThemMon";
             this.btThemMon.Size = new System.Drawing.Size(127, 50);
             this.btThemMon.TabIndex = 5;
@@ -137,7 +139,7 @@
             // 
             this.btGiamGia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGiamGia.Location = new System.Drawing.Point(931, 171);
-            this.btGiamGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btGiamGia.Margin = new System.Windows.Forms.Padding(4);
             this.btGiamGia.Name = "btGiamGia";
             this.btGiamGia.Size = new System.Drawing.Size(127, 50);
             this.btGiamGia.TabIndex = 6;
@@ -148,7 +150,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(931, 282);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 50);
             this.button2.TabIndex = 7;
@@ -158,7 +160,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(931, 123);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             100,
             0,
@@ -176,7 +178,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(931, 229);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             100,
             0,
@@ -205,7 +207,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(931, 383);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 22);
             this.textBox1.TabIndex = 11;
@@ -217,7 +219,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(14, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(547, 62);
+            this.label3.Size = new System.Drawing.Size(572, 62);
             this.label3.TabIndex = 12;
             this.label3.Text = "Trà Sữa 3 Thành Viên ";
             // 
@@ -232,7 +234,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1104, 529);
+            this.ClientSize = new System.Drawing.Size(1104, 549);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
@@ -244,7 +246,7 @@
             this.Controls.Add(this.btThemMon);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flTable);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
@@ -269,7 +271,7 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flTable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btThemMon;
